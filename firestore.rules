@@ -1,0 +1,26 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Mandir suchna + trust: padhna sabko, likhna bhi khula
+    // (chhoti samiti site — admin login app ke andar hai)
+    match /news/{id} {
+      allow read: if true;
+      allow create, update: if request.resource.data.title is string
+        && request.resource.data.title.size() > 0;
+      allow delete: if true;
+    }
+    match /trustees/{id} {
+      allow read: if true;
+      allow create, update: if request.resource.data.name is string
+        && request.resource.data.name.size() > 0;
+      allow delete: if true;
+    }
+    match /photos/{id} {
+      allow read: if true;
+      allow create, update: if request.resource.data.src is string
+        && request.resource.data.src.size() > 0
+        && request.resource.data.src.size() < 1100000;
+      allow delete: if true;
+    }
+  }
+}
