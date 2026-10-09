@@ -66,7 +66,7 @@ export default function Home({ news, uploads = [] }) {
           <Link className="btn btn-call" to="/daan">दान करो →</Link>
         </div>
 
-        <div className="footer">🙏 <b>{MANDIR.name}</b> 🙏<br />{MANDIR.address}<br />Made by <a href="https://hoshiyartech.in" target="_blank" rel="noreferrer"><b>HoshiyarTech</b></a></div>
+        <div className="footer">🙏 <b>{MANDIR.name}</b> 🙏<br />{MANDIR.address}<br />Made by <a href="https://hoshiyartech.in/company" target="_blank" rel="noreferrer"><b>HoshiyarTech</b></a></div>
       </div>
     </div>
   );
