@@ -4,6 +4,7 @@ import { MANDIR, HERO, PHOTOS, FACILITIES } from "../lib/mandir";
 
 export default function Home({ news, uploads = [] }) {
   const [i, setI] = useState(0);
+  
   useEffect(() => {
     const t = setInterval(() => setI((p) => (p + 1) % HERO.length), 4000);
     return () => clearInterval(t);
@@ -11,6 +12,7 @@ export default function Home({ news, uploads = [] }) {
 
   return (
     <div>
+        
       <section className="slider">
         <img src={HERO[i]} alt="Mata Rani" />
         <div className="slide-cap">🙏 {MANDIR.name} 🙏</div>

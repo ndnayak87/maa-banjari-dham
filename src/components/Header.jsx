@@ -34,6 +34,7 @@ export default function Header() {
           {isAdmin ? (
             <>
               <Link to="/admin" onClick={() => setOpen(false)}>⚙️ एडमिन</Link>
+              <Link to="/login" onClick={() => setOpen(false)}>🔒 पासवर्ड</Link>
               <button className="linkbtn" onClick={() => { logout(); nav("/"); }}>लॉगआउट</button>
             </>
           ) : (
