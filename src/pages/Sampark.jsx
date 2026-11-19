@@ -14,15 +14,50 @@ export default function Sampark() {
       </div>
       <div className="card">
         <b>🗺️ मंदिर का स्थान</b>
-        <iframe
-          title="Maa Banjari Dham Map"
-          src={MAP_EMBED}
-          style={{ width: "100%", height: 320, border: 0, borderRadius: 12, marginTop: 10 }}
-          loading="lazy"
-          allowFullScreen
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-        <p className="muted" style={{ marginBottom: 4 }}>मैप नहीं दिख रहा? नीचे वाले लिंक से खोलें ↓</p>
+        <div style={{ position: "relative", marginTop: 10 }}>
+          <iframe
+            title="Maa Banjari Dham Map"
+            src={MAP_EMBED}
+            style={{ width: "100%", height: 320, border: 0, borderRadius: 12, display: "block" }}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <a
+            href={MAP_LINK}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Google Maps में खोलें"
+            title="Google Maps में खोलें"
+            style={{
+              position: "absolute",
+              inset: 0,
+              borderRadius: 12,
+              display: "flex",
+              alignItems: "flex-end",
+              justifyContent: "flex-end",
+              padding: 10,
+              textDecoration: "none",
+            }}
+          >
+            <span
+              style={{
+                background: "rgba(0,0,0,0.72)",
+                color: "#fff",
+                padding: "8px 14px",
+                borderRadius: 999,
+                fontSize: 13,
+                fontWeight: 700,
+                boxShadow: "0 2px 8px rgba(0,0,0,.25)",
+              }}
+            >
+              🔍 बड़ा नक्शा खोलें
+            </span>
+          </a>
+        </div>
+        <p className="muted" style={{ marginTop: 10, marginBottom: 6 }}>
+          नक्शे पर क्लिक करने से Google Maps में खुल जाएगा।
+        </p>
         <p>
           <a className="btn btn-small" href={MAP_LINK} target="_blank" rel="noreferrer">📍 Google Maps में रास्ता देखें →</a>
         </p>
