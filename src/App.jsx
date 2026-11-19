@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider, useAuth } from "./lib/auth";
 import { useNews, useTrustees, usePhotos } from "./lib/store";
+import { usePageMeta } from "./lib/seo";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Itihas from "./pages/Itihas";
@@ -22,6 +23,7 @@ function Shell() {
   const { items, add, remove, update } = useNews();
   const trustees = useTrustees();
   const photos = usePhotos();
+  usePageMeta();
   return (
     <>
       <Header />
