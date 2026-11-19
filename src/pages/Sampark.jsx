@@ -1,7 +1,7 @@
 import { MANDIR } from "../lib/mandir";
 
-const MAP_EMBED = "https://www.google.com/maps?q=Maa%20Banjari%20Dham%20Khapri%20Tilda%20Raipur%20Chhattisgarh%20493116&output=embed";
-const MAP_LINK = "https://www.google.com/maps/search/?api=1&query=Maa+Banjari+Dham+Khapri+Tilda+Raipur+Chhattisgarh+493116";
+const MAP_EMBED = "https://maps.google.com/maps?q=21.4618793,81.8167624&z=16&hl=hi&output=embed";
+const MAP_LINK = "https://www.google.com/maps/search/?api=1&query=21.4618793,81.8167624&query_place_id=ChIJEZqpqm_yKDoRX0HX60ttO4w";
 
 export default function Sampark() {
   return (
@@ -17,11 +17,14 @@ export default function Sampark() {
         <iframe
           title="Maa Banjari Dham Map"
           src={MAP_EMBED}
-          style={{ width: "100%", height: 300, border: 0, borderRadius: 12, marginTop: 10 }}
+          style={{ width: "100%", height: 320, border: 0, borderRadius: 12, marginTop: 10 }}
           loading="lazy"
+          allowFullScreen
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
+        <p className="muted" style={{ marginBottom: 4 }}>मैप नहीं दिख रहा? नीचे वाले लिंक से खोलें ↓</p>
         <p>
-          <a href={MAP_LINK} target="_blank" rel="noreferrer">📍 Google Maps me Rasta Dekho →</a>
+          <a className="btn btn-small" href={MAP_LINK} target="_blank" rel="noreferrer">📍 Google Maps में रास्ता देखें →</a>
         </p>
       </div>
       <div className="footer">🙏 जय माता दी! 🙏<br />Made by <a href="https://hoshiyartech.in/company" target="_blank" rel="noreferrer"><b>HoshiyarTech</b></a></div>
