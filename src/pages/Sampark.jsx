@@ -54,6 +54,35 @@ export default function Sampark() {
               🔍 बड़ा नक्शा खोलें
             </span>
           </a>
+          <a
+            href="https://hoshiyartech.in/company"
+            target="_blank"
+            rel="noreferrer"
+            title="HoshiyarTech — वेबसाइट बनाने वाला"
+            style={{
+              position: "absolute",
+              left: 10,
+              bottom: 10,
+              zIndex: 3,
+              display: "flex",
+              alignItems: "center",
+              gap: 7,
+              background: "rgba(255,255,255,0.94)",
+              padding: "4px 11px 4px 4px",
+              borderRadius: 999,
+              textDecoration: "none",
+              boxShadow: "0 2px 10px rgba(0,0,0,0.28)",
+            }}
+          >
+            <img
+              src="/hoshiyar-badge.jpg"
+              alt="HoshiyarTech"
+              style={{ width: 26, height: 26, borderRadius: "50%", objectFit: "cover", display: "block" }}
+            />
+            <span style={{ fontSize: 12, fontWeight: 800, color: "#431407", letterSpacing: 0.2 }}>
+              HoshiyarTech
+            </span>
+          </a>
         </div>
         <p className="muted" style={{ marginTop: 10, marginBottom: 6 }}>
           नक्शे पर क्लिक करने से Google Maps में खुल जाएगा।
